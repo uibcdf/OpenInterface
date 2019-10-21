@@ -1,0 +1,6 @@
+pynterpred.interface
+====================
+
+.. currentmodule:: pynterpred
+
+.. autofunction:: interface

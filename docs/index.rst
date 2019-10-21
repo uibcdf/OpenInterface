@@ -17,7 +17,13 @@ Parrafo para instalar
    :maxdepth: 2
    :caption: Contents:
 
+API Documentation
+-----------------
 
+.. toctree::
+   :maxdepth: 1
+
+   api/index
 
 Indices and tables
 ==================
