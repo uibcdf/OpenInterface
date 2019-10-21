@@ -6,6 +6,13 @@
 Welcome to Pynterpred's documentation!
 ======================================
 
+Este es el parrafo de introduccion
+
+Instalation
+-----------
+
+Parrafo para instalar
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
