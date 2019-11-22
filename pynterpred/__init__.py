@@ -1,3 +1,2 @@
-from .main import interface
-
-__all__ = [interface]
+from . import a
+from . import b

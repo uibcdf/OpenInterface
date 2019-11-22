@@ -1,0 +1,6 @@
+pynterpred.a.sasa\_interface
+============================
+
+.. currentmodule:: pynterpred.a
+
+.. autofunction:: sasa_interface

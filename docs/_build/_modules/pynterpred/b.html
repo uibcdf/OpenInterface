@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pynterpred.b &mdash; Pynterpred 0.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Pynterpred
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/index.html#lista-de-funciones-del-pynterpred">Lista de funciones del Pynterpred</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/_autosummary/pynterpred.a.sasa_interface.html">pynterpred.a.sasa_interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/_autosummary/pynterpred.b.residues_interface.html">pynterpred.b.residues_interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/index.html#glossary">Glossary</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Pynterpred</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>pynterpred.b</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for pynterpred.b</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">simtk.unit</span> <span class="k">import</span> <span class="n">angstroms</span> <span class="k">as</span> <span class="n">_angstroms</span>
+
+<div class="viewcode-block" id="residues_interface"><a class="viewcode-back" href="../../api/_autosummary/pynterpred.b.residues_interface.html#pynterpred.b.residues_interface">[docs]</a><span class="k">def</span> <span class="nf">residues_interface</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">receptor_selection</span><span class="p">,</span> <span class="n">ligand_selection</span><span class="p">,</span> <span class="n">threshold</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">*</span> <span class="n">_angstroms</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;residues_interface(item, receptor_selection, ligand_selection, threshold = 15 * _angstroms)</span>
+
+<span class="sd">    List of residues defining the interface.</span>
+
+<span class="sd">    This function defines the interface as the list of aminoacids of the receptor at a distance below a given threshold,</span>
+<span class="sd">    and as the list of aminoacids of the ligand ...</span>
+
+<span class="sd">    See reference Pepito Journal of whatever 2018.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    item: mdtraj.Trajectory</span>
+<span class="sd">        Molecular model as a mdtraj.Trajectory object containing the protein complex.</span>
+
+<span class="sd">    receptor_selection: str</span>
+<span class="sd">        Selection string of the receptor in item in mdtraj syntaxis (see: web de mdtraj con ejemplos de seleccion).</span>
+
+<span class="sd">    ligand_selection: str</span>
+<span class="sd">        Selection string of the ligand in item in mdtraj syntaxis (see: web de mdtraj con ejemplos de seleccion).</span>
+
+<span class="sd">    threshold: quantity, default=15*angstroms</span>
+<span class="sd">        Distance threshold defining the aminoacids belonging to the interface.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    List:</span>
+<span class="sd">        List of residue index of receptor interface</span>
+
+<span class="sd">    List:</span>
+<span class="sd">        List of residue index of ligand interface</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    .. highlight:: python</span>
+
+<span class="sd">    &gt;&gt;&gt; import pynterpred</span>
+<span class="sd">    &gt;&gt;&gt; import mdtraj as md</span>
+
+<span class="sd">    &gt;&gt;&gt; TPI = md.load(&#39;tpi.pdb&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; list_interf_rec, list_interf_lig = pynterpred.b.residues_interface(TPI, &quot;chainid 0&quot;, &quot;chainid 1&quot;)</span>
+
+<span class="sd">    &gt;&gt;&gt; print(&quot;Residues in receptor:&quot;, list_interf_rec)</span>
+<span class="sd">    &gt;&gt;&gt; print(&quot;Residues in ligand:&quot;, list_interf_lig)</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+
+<span class="sd">    Todo</span>
+<span class="sd">    ----</span>
+
+<span class="sd">    Warning</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+    <span class="kn">from</span> <span class="nn">simtk.unit</span> <span class="k">import</span> <span class="n">angstrom</span><span class="p">,</span> <span class="n">nanometers</span>
+    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+    
+    <span class="n">list_atoms_CA_receptor</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">receptor_selection</span><span class="o">+</span><span class="s1">&#39; and name CA&#39;</span><span class="p">)</span>
+    <span class="n">list_atoms_CA_ligand</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">ligand_selection</span><span class="o">+</span><span class="s1">&#39; and name CA&#39;</span><span class="p">)</span>
+    <span class="n">num_CAs_receptor</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">list_atoms_CA_receptor</span><span class="p">)</span>
+    <span class="n">num_CAs_ligand</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">list_atoms_CA_ligand</span><span class="p">)</span>
+        
+    <span class="c1"># Para el receptor            </span>
+    <span class="n">CAs_elegidos_rec</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">CA_i_receptor</span> <span class="ow">in</span> <span class="n">list_atoms_CA_receptor</span><span class="p">:</span>
+    
+        <span class="n">si_es</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">CA_i_ligando</span> <span class="ow">in</span> <span class="n">list_atoms_CA_ligand</span><span class="p">:</span>
+            
+            <span class="n">pos_CA_i_receptor</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">xyz</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">CA_i_receptor</span><span class="p">,:]</span>
+            <span class="n">pos_CA_i_ligando</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">xyz</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">CA_i_ligando</span><span class="p">,:]</span>
+            
+            <span class="n">distancia</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="p">(</span><span class="n">pos_CA_i_receptor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">pos_CA_i_ligando</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span>
+                                 <span class="p">(</span><span class="n">pos_CA_i_receptor</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">pos_CA_i_ligando</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span>
+                                 <span class="p">(</span><span class="n">pos_CA_i_receptor</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">pos_CA_i_ligando</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span>
+                               <span class="p">)</span> <span class="o">*</span> <span class="n">nanometers</span>
+        
+            <span class="k">if</span> <span class="n">distancia</span> <span class="o">&lt;=</span> <span class="n">threshold</span><span class="p">:</span>
+                <span class="n">si_es</span> <span class="o">=</span> <span class="kc">True</span>
+            
+        <span class="k">if</span> <span class="n">si_es</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">CAs_elegidos_rec</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">CA_i_receptor</span><span class="p">)</span>
+        
+    <span class="n">lista_indices_residuos_elegidos_rec</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="n">CAs_elegidos_rec</span><span class="p">:</span>
+        <span class="n">jj</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">atom</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span><span class="o">.</span><span class="n">residue</span><span class="o">.</span><span class="n">index</span>
+        <span class="n">lista_indices_residuos_elegidos_rec</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">jj</span><span class="p">)</span>
+    
+    <span class="c1"># Para el ligando</span>
+    
+    <span class="n">CAs_elegidos_lig</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">CA_i_ligand</span> <span class="ow">in</span> <span class="n">list_atoms_CA_ligand</span><span class="p">:</span>
+    
+        <span class="n">si_es</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">CA_i_receptor</span> <span class="ow">in</span> <span class="n">list_atoms_CA_receptor</span><span class="p">:</span>
+        
+            <span class="n">pos_CA_i_ligand</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">xyz</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">CA_i_ligand</span><span class="p">,:]</span>
+            <span class="n">pos_CA_i_receptor</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">xyz</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">CA_i_receptor</span><span class="p">,:]</span>
+        
+            <span class="n">distancia</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="p">(</span><span class="n">pos_CA_i_ligand</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">pos_CA_i_receptor</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span>
+                                 <span class="p">(</span><span class="n">pos_CA_i_ligand</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">pos_CA_i_receptor</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span>
+                                 <span class="p">(</span><span class="n">pos_CA_i_ligand</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">pos_CA_i_receptor</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span>
+                                <span class="p">)</span> <span class="o">*</span> <span class="n">nanometers</span>
+        
+            <span class="k">if</span> <span class="n">distancia</span> <span class="o">&lt;=</span> <span class="n">threshold</span><span class="p">:</span>
+                <span class="n">si_es</span> <span class="o">=</span> <span class="kc">True</span>
+                
+        <span class="k">if</span> <span class="n">si_es</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">CAs_elegidos_lig</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">CA_i_ligand</span><span class="p">)</span>
+    
+    <span class="n">lista_indices_residuos_elegidos_lig</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="n">CAs_elegidos_lig</span><span class="p">:</span>
+        <span class="n">jj</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">atom</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span><span class="o">.</span><span class="n">residue</span><span class="o">.</span><span class="n">index</span>
+        <span class="n">lista_indices_residuos_elegidos_lig</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">jj</span><span class="p">)</span> 
+
+    <span class="k">return</span> <span class="n">lista_indices_residuos_elegidos_rec</span><span class="p">,</span> <span class="n">lista_indices_residuos_elegidos_lig</span></div>
+
+
+
+
+
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, UIBCDF Lab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

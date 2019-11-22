@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pynterpred.b.residues_interface &mdash; Pynterpred 0.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="pynterpred.a.sasa_interface" href="pynterpred.a.sasa_interface.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Pynterpred
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#lista-de-funciones-del-pynterpred">Lista de funciones del Pynterpred</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pynterpred.a.sasa_interface.html">pynterpred.a.sasa_interface</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pynterpred.b.residues_interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#glossary">Glossary</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Pynterpred</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">API Documentation</a> &raquo;</li>
+        
+      <li>pynterpred.b.residues_interface</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/_autosummary/pynterpred.b.residues_interface.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="pynterpred-b-residues-interface">
+<h1>pynterpred.b.residues_interface<a class="headerlink" href="#pynterpred-b-residues-interface" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pynterpred.b.residues_interface">
+<code class="sig-prename descclassname">pynterpred.b.</code><code class="sig-name descname">residues_interface</code><span class="sig-paren">(</span><em class="sig-param">item</em>, <em class="sig-param">receptor_selection</em>, <em class="sig-param">ligand_selection</em>, <em class="sig-param">threshold = 15 * _angstroms</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pynterpred/b.html#residues_interface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynterpred.b.residues_interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of residues defining the interface.</p>
+<p>This function defines the interface as the list of aminoacids of the receptor at a distance below a given threshold,
+and as the list of aminoacids of the ligand …</p>
+<p>See reference Pepito Journal of whatever 2018.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>item: mdtraj.Trajectory</strong></dt><dd><p>Molecular model as a mdtraj.Trajectory object containing the protein complex.</p>
+</dd>
+<dt><strong>receptor_selection: str</strong></dt><dd><p>Selection string of the receptor in item in mdtraj syntaxis (see: web de mdtraj con ejemplos de seleccion).</p>
+</dd>
+<dt><strong>ligand_selection: str</strong></dt><dd><p>Selection string of the ligand in item in mdtraj syntaxis (see: web de mdtraj con ejemplos de seleccion).</p>
+</dd>
+<dt><strong>threshold: quantity, default=15*angstroms</strong></dt><dd><p>Distance threshold defining the aminoacids belonging to the interface.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>List:</dt><dd><p>List of residue index of receptor interface</p>
+</dd>
+<dt>List:</dt><dd><p>List of residue index of ligand interface</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pynterpred</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdtraj</span> <span class="k">as</span> <span class="nn">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TPI</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;tpi.pdb&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">list_interf_rec</span><span class="p">,</span> <span class="n">list_interf_lig</span> <span class="o">=</span> <span class="n">pynterpred</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">residues_interface</span><span class="p">(</span><span class="n">TPI</span><span class="p">,</span> <span class="s2">&quot;chainid 0&quot;</span><span class="p">,</span> <span class="s2">&quot;chainid 1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Residues in receptor:&quot;</span><span class="p">,</span> <span class="n">list_interf_rec</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Residues in ligand:&quot;</span><span class="p">,</span> <span class="n">list_interf_lig</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="pynterpred.a.sasa_interface.html" class="btn btn-neutral float-left" title="pynterpred.a.sasa_interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, UIBCDF Lab
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

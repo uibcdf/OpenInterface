@@ -7,13 +7,14 @@ API Documentation
 Lista de funciones del Pynterpred
 ---------------------------------
 
-Funciones para caracterizar las interfaces
+Funciones para caracterizar las interfaces CUANDO SE PUEDA
 
 
 .. autosummary::
    :toctree: _autosummary
 
-        interface
+        a.sasa_interface
+        b.residues_interface
 
 Glossary
 --------

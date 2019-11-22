@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pynterpred.interface &mdash; Pynterpred 0.0.0 documentation</title>
+  <title>pynterpred.a.sasa_interface &mdash; Pynterpred 0.0.0 documentation</title>
   
 
   
@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="pynterpred.b.residues_interface" href="pynterpred.b.residues_interface.html" />
     <link rel="prev" title="API Documentation" href="../index.html" /> 
 </head>
 
@@ -83,7 +84,8 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#lista-de-funciones-del-pynterpred">Lista de funciones del Pynterpred</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">pynterpred.interface</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pynterpred.a.sasa_interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pynterpred.b.residues_interface.html">pynterpred.b.residues_interface</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#glossary">Glossary</a></li>
@@ -136,13 +138,13 @@
         
           <li><a href="../index.html">API Documentation</a> &raquo;</li>
         
-      <li>pynterpred.interface</li>
+      <li>pynterpred.a.sasa_interface</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/_autosummary/pynterpred.interface.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/_autosummary/pynterpred.a.sasa_interface.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -179,40 +181,12 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="pynterpred-interface">
-<h1>pynterpred.interface<a class="headerlink" href="#pynterpred-interface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pynterpred-a-sasa-interface">
+<h1>pynterpred.a.sasa_interface<a class="headerlink" href="#pynterpred-a-sasa-interface" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="pynterpred.interface">
-<code class="sig-prename descclassname">pynterpred.</code><code class="sig-name descname">interface</code><span class="sig-paren">(</span><em class="sig-param">item</em>, <em class="sig-param">receptor=None</em>, <em class="sig-param">ligand=None</em>, <em class="sig-param">threshold_1st_shell=6*angstroms</em>, <em class="sig-param">threshold_2nd_shell=9*angstroms</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pynterpred/main.html#interface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynterpred.interface" title="Permalink to this definition">¶</a></dt>
-<dd><p>Caracterización de interfaces.</p>
-<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXX
-xxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>item: molecular model</strong></dt><dd><p>Molecular model as a pdb file, pdb id, mdtraj object… sobre el que se calcula la interface</p>
-</dd>
-<dt><strong>receptor: str, default=None</strong></dt><dd><p>definicion del receptor.</p>
-</dd>
-<dt><strong>ligand: str, default=None</strong></dt><dd><p>definicion del ligando.</p>
-</dd>
-<dt><strong>threshold_1st_shell: quantity, default=6*angstroms</strong></dt><dd><p>Distancia limite que define la primera capa</p>
-</dd>
-<dt><strong>threshold_2nd_shell: quantity, default=9*angstroms</strong></dt><dd><p>Distancia limite que define la segunda capa</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt>List of lists</dt><dd><p>Lista de los residuos que componen las capas.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
+<dt id="pynterpred.a.sasa_interface">
+<code class="sig-prename descclassname">pynterpred.a.</code><code class="sig-name descname">sasa_interface</code><span class="sig-paren">(</span><em class="sig-param">item</em>, <em class="sig-param">receptor_selection</em>, <em class="sig-param">ligand_selection</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pynterpred/a.html#sasa_interface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynterpred.a.sasa_interface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </div>
 
@@ -223,6 +197,8 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pynterpred.b.residues_interface.html" class="btn btn-neutral float-right" title="pynterpred.b.residues_interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
