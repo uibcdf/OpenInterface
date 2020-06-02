@@ -1,6 +1,6 @@
-pynterpred.b.residues\_interface
+openinterface.b.residues\_interface
 ================================
 
-.. currentmodule:: pynterpred.b
+.. currentmodule:: openinterface.b
 
 .. autofunction:: residues_interface

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pynterpred.b.residues_interface &mdash; Pynterpred 0.0.0 documentation</title>
+  <title>openinterface.b.residues_interface &mdash; OpenInterface 0.0.0 documentation</title>
   
 
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="pynterpred.a.sasa_interface" href="pynterpred.a.sasa_interface.html" /> 
+    <link rel="prev" title="openinterface.a.sasa_interface" href="openinterface.a.sasa_interface.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -50,7 +50,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Pynterpred
+            <a href="../../index.html" class="icon icon-home"> OpenInterface
           
 
           
@@ -82,9 +82,9 @@
             
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Documentation</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#lista-de-funciones-del-pynterpred">Lista de funciones del Pynterpred</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="pynterpred.a.sasa_interface.html">pynterpred.a.sasa_interface</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">pynterpred.b.residues_interface</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#lista-de-funciones-del-openinterface">Lista de funciones del OpenInterface</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="openinterface.a.sasa_interface.html">openinterface.a.sasa_interface</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">openinterface.b.residues_interface</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#glossary">Glossary</a></li>
@@ -104,7 +104,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Pynterpred</a>
+          <a href="../../index.html">OpenInterface</a>
         
       </nav>
 
@@ -137,13 +137,13 @@
         
           <li><a href="../index.html">API Documentation</a> &raquo;</li>
         
-      <li>pynterpred.b.residues_interface</li>
+      <li>openinterface.b.residues_interface</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/_autosummary/pynterpred.b.residues_interface.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/_autosummary/openinterface.b.residues_interface.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -180,11 +180,11 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="pynterpred-b-residues-interface">
-<h1>pynterpred.b.residues_interface<a class="headerlink" href="#pynterpred-b-residues-interface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="openinterface-b-residues-interface">
+<h1>openinterface.b.residues_interface<a class="headerlink" href="#openinterface-b-residues-interface" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="pynterpred.b.residues_interface">
-<code class="sig-prename descclassname">pynterpred.b.</code><code class="sig-name descname">residues_interface</code><span class="sig-paren">(</span><em class="sig-param">item</em>, <em class="sig-param">receptor_selection</em>, <em class="sig-param">ligand_selection</em>, <em class="sig-param">threshold = 15 * _angstroms</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pynterpred/b.html#residues_interface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynterpred.b.residues_interface" title="Permalink to this definition">¶</a></dt>
+<dt id="openinterface.b.residues_interface">
+<code class="sig-prename descclassname">openinterface.b.</code><code class="sig-name descname">residues_interface</code><span class="sig-paren">(</span><em class="sig-param">item</em>, <em class="sig-param">receptor_selection</em>, <em class="sig-param">ligand_selection</em>, <em class="sig-param">threshold = 15 * _angstroms</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/openinterface/b.html#residues_interface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#openinterface.b.residues_interface" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of residues defining the interface.</p>
 <p>This function defines the interface as the list of aminoacids of the receptor at a distance below a given threshold,
 and as the list of aminoacids of the ligand …</p>
@@ -212,12 +212,12 @@ and as the list of aminoacids of the ligand …</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pynterpred</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">openinterface</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdtraj</span> <span class="k">as</span> <span class="nn">md</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TPI</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;tpi.pdb&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">list_interf_rec</span><span class="p">,</span> <span class="n">list_interf_lig</span> <span class="o">=</span> <span class="n">pynterpred</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">residues_interface</span><span class="p">(</span><span class="n">TPI</span><span class="p">,</span> <span class="s2">&quot;chainid 0&quot;</span><span class="p">,</span> <span class="s2">&quot;chainid 1&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">list_interf_rec</span><span class="p">,</span> <span class="n">list_interf_lig</span> <span class="o">=</span> <span class="n">openinterface</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">residues_interface</span><span class="p">(</span><span class="n">TPI</span><span class="p">,</span> <span class="s2">&quot;chainid 0&quot;</span><span class="p">,</span> <span class="s2">&quot;chainid 1&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Residues in receptor:&quot;</span><span class="p">,</span> <span class="n">list_interf_rec</span><span class="p">)</span>
@@ -237,7 +237,7 @@ and as the list of aminoacids of the ligand …</p>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="pynterpred.a.sasa_interface.html" class="btn btn-neutral float-left" title="pynterpred.a.sasa_interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="openinterface.a.sasa_interface.html" class="btn btn-neutral float-left" title="openinterface.a.sasa_interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

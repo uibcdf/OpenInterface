@@ -1,10 +1,10 @@
-.. currentmodule:: pynterpred
+.. currentmodule:: openinterface
 
 #################
 API Documentation
 #################
 
-Lista de funciones del Pynterpred
+Lista de funciones del OpenInterface
 ---------------------------------
 
 Funciones para caracterizar las interfaces CUANDO SE PUEDA

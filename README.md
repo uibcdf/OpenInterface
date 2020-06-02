@@ -1,4 +1,4 @@
-# Pynterpred
+# OpenInterface
 Caracterización de interfaces...
 
 ## Qué hace?

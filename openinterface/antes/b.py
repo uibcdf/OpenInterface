@@ -38,11 +38,11 @@ def residues_interface(item, receptor_selection, ligand_selection, threshold = 1
     --------
     .. highlight:: python
 
-    >>> import pynterpred
+    >>> import openinterface
     >>> import mdtraj as md
 
     >>> TPI = md.load('tpi.pdb')
-    >>> list_interf_rec, list_interf_lig = pynterpred.b.residues_interface(TPI, "chainid 0", "chainid 1")
+    >>> list_interf_rec, list_interf_lig = openinterface.b.residues_interface(TPI, "chainid 0", "chainid 1")
 
     >>> print("Residues in receptor:", list_interf_rec)
     >>> print("Residues in ligand:", list_interf_lig)
