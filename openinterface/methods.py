@@ -21,9 +21,9 @@ def contact_map(item, receptor_selection, ligand_selection, contact_type='CAs', 
     group_indices_ligand = get(item, target='group', selection=ligand_selection,
                                  group_index=True)
 
-    CA_indices_receptor = select(item, selection='atom.name=="CA" and '+receptor_selection)
+    CA_indices_receptor = select(item, selection='atom.name=="CA" and group.index==@group_indices_receptor')
 
-    CA_indices_ligand = select(item, selection='atom.name=="CA" and '+ligand_selection)
+    CA_indices_ligand = select(item, selection='atom.name=="CA" and group.index==@group_indices_ligand')
 
     cmap = contact_map(item, selection_1=CA_indices_receptor, selection_2=CA_indices_ligand,
                        threshold=threshold)
