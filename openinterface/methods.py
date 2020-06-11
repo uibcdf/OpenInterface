@@ -11,6 +11,17 @@ def connectivity(item, receptor_selection, ligand_selection, contact_type='CAs',
 
     return connectivity_receptor, connectivity_ligand, labels_receptor, labels_ligand
 
+def nearby_connectivity(item, receptor_selection, ligand_selection, contact_type='CAs', threshold=0.6*unit.nanometers):
+
+    cmap, labels_receptor, labels_ligand = contact_map(item, receptor_selection, ligand_selection,
+                                                      contact_type=contact_type, threshold=threshold)
+
+    connectivity_receptor = cmap.sum(axis=2)
+    connectivity_ligand = cmap.sum(axis=1)
+
+    return connectivity_receptor, connectivity_ligand, labels_receptor, labels_ligand
+
+
 def contact_map(item, receptor_selection, ligand_selection, contact_type='CAs', threshold=1.2*unit.nanometers):
 
     from molsysmt import get, select, contact_map, info
@@ -96,4 +107,57 @@ def sasa_buried (item, receptor_selection, ligand_selection):
     sasa_ligand = sasa(tmp_ligand, target='atom').sum(axis=1)
 
     return sasa_receptor+sasa_ligand-sasa_complex
+
+def contacting_residues (item, receptor_selection, ligand_selection):
+
+    from molsysmt import extract, get, info
+    from molsysmt import distance
+    from numpy import where, unique
+    from simtk.unit import angstroms
+    from molsysmt.physchem import get_radii
+
+    atom_indices_receptor = get(item, target='atom', selection=receptor_selection,
+                                 group_index=True)
+
+    atom_indices_ligand = get(item, target='atom', selection=ligand_selection,
+                                 group_index=True)
+
+    distances = distance(item, selection_1=atom_indices_receptor, selection_2=atom_indices_ligand)
+
+    frame_index, atoms1, atoms2 = where(distances < 4.1 * angstroms)
+
+    vdw_atoms1 = get_radii(item, selection=atoms1, target='atom', radius_type='vdw')
+    vdw_atoms2 = get_radii(item, selection=atoms2, target='atom', radius_type='vdw')
+
+    list_contacting_atoms_receptor = []
+    list_contacting_atoms_ligand = []
+
+    for ii, jj, vdw_ii, vdw_jj  in zip(atoms1, atoms2, vdw_atoms1, vdw_atoms2):
+        if distances[0,ii,jj] < (vdw_ii+vdw_jj+0.5*angstroms):
+            list_contacting_atoms_receptor.append(ii)
+            list_contacting_atoms_ligand.append(jj)
+
+    list_contacting_atoms_receptor = unique(list_contacting_atoms_receptor)
+    list_contacting_atoms_ligand = unique(list_contacting_atoms_ligand)
+
+    atom_indices_receptor = get(item, target='atom', selection=receptor_selection,
+                                 atom_index=True)
+
+    atom_indices_ligand = get(item, target='atom', selection=ligand_selection,
+                                 atom_index=True)
+
+    list_contacting_atoms_receptor = atom_indices_receptor[list_contacting_atoms_receptor]
+    list_contacting_atoms_ligand = atom_indices_ligand[list_contacting_atoms_ligand]
+
+    list_contacting_residues_receptor = get(item, selection=list_contacting_atoms_receptor,
+                                            group_index=True)
+
+    list_contacting_residues_ligand = get(item, selection=list_contacting_atoms_ligand,
+                                            group_index=True)
+
+    list_contacting_residues_receptor = unique(list_contacting_residues_receptor)
+    list_contacting_residues_ligand = unique(list_contacting_residues_ligand)
+
+
+    return list_contacting_residues_receptor, list_contacting_residues_ligand
 
