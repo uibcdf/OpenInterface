@@ -117,43 +117,34 @@ def contacting_residues (item, receptor_selection, ligand_selection):
     from molsysmt.physchem import get_radii
 
     atom_indices_receptor = get(item, target='atom', selection=receptor_selection,
-                                 group_index=True)
+                                index=True)
 
     atom_indices_ligand = get(item, target='atom', selection=ligand_selection,
-                                 group_index=True)
+                              index=True)
 
     distances = distance(item, selection_1=atom_indices_receptor, selection_2=atom_indices_ligand)
 
-    frame_index, atoms1, atoms2 = where(distances < 4.1 * angstroms)
+    frame_index, indices_in_receptor, indices_in_ligand = where(distances < 4.1 * angstroms)
 
-    vdw_atoms1 = get_radii(item, selection=atoms1, target='atom', radius_type='vdw')
-    vdw_atoms2 = get_radii(item, selection=atoms2, target='atom', radius_type='vdw')
+    vdw_atoms1 = get_radii(item, selection=atom_indices_receptor[indices_in_receptor], target='atom', radius_type='vdw')
+    vdw_atoms2 = get_radii(item, selection=atom_indices_ligand[indices_in_ligand], target='atom', radius_type='vdw')
 
-    list_contacting_atoms_receptor = []
-    list_contacting_atoms_ligand = []
+    list_contacting_receptor = []
+    list_contacting_ligand = []
 
-    for ii, jj, vdw_ii, vdw_jj  in zip(atoms1, atoms2, vdw_atoms1, vdw_atoms2):
+    for ii, jj, vdw_ii, vdw_jj  in zip(indices_in_receptor, indices_in_ligand, vdw_atoms1, vdw_atoms2):
         if distances[0,ii,jj] < (vdw_ii+vdw_jj+0.5*angstroms):
-            list_contacting_atoms_receptor.append(ii)
-            list_contacting_atoms_ligand.append(jj)
+            list_contacting_receptor.append(ii)
+            list_contacting_ligand.append(jj)
 
-    list_contacting_atoms_receptor = unique(list_contacting_atoms_receptor)
-    list_contacting_atoms_ligand = unique(list_contacting_atoms_ligand)
-
-    atom_indices_receptor = get(item, target='atom', selection=receptor_selection,
-                                 atom_index=True)
-
-    atom_indices_ligand = get(item, target='atom', selection=ligand_selection,
-                                 atom_index=True)
-
-    list_contacting_atoms_receptor = atom_indices_receptor[list_contacting_atoms_receptor]
-    list_contacting_atoms_ligand = atom_indices_ligand[list_contacting_atoms_ligand]
+    list_contacting_atoms_receptor = atom_indices_receptor[unique(list_contacting_receptor)]
+    list_contacting_atoms_ligand = atom_indices_ligand[unique(list_contacting_ligand)]
 
     list_contacting_residues_receptor = get(item, selection=list_contacting_atoms_receptor,
                                             group_index=True)
 
     list_contacting_residues_ligand = get(item, selection=list_contacting_atoms_ligand,
-                                            group_index=True)
+                                          group_index=True)
 
     list_contacting_residues_receptor = unique(list_contacting_residues_receptor)
     list_contacting_residues_ligand = unique(list_contacting_residues_ligand)
